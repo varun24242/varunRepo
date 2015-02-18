@@ -1,0 +1,24 @@
+﻿<div ng-controller="HomeController as homeController">
+	<div class="index-table-margin">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Status</th>
+					<th>Address</th>
+					<th>Available</th>
+					<th>Delete</th>
+				</tr>
+			</thead>
+			<tbody ng-repeat="data in homeController.data">
+				<tr>
+					<td><a href="#/user/{{data.id}}">{{data.name}}</a></td>
+					<td>{{data.status}}</td>
+					<td>{{data.address}}</td>
+					<td><span class="glyphicon" ng-class="{'glyphicon-ok-sign':data.available , 'glyphicon-remove-sign':!data.available}"></span></td>
+					<td ng-click="homeController.removeRow(data)"><span class="glyphicon glyphicon-trash"></span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>@ViewBag.Title</title>
+	@Styles.Render("~/Content/css")
+	@Scripts.Render("~/bundles/modernizr")
+	<link href="~/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="~/css/bootstrap-theme.min.css" rel="stylesheet" />
+	<link href="~/css/main.css" rel="stylesheet" />
+</head>
+<body ng-app="FriendApp">
+	@RenderBody()
+
+	@Scripts.Render("~/bundles/jquery")
+	<script src="~/Scripts/angular.js"></script>
+	<script src="~/Scripts/angular-route.js"></script>
+	<script src="~/Scripts/angular-resource.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+
+	<script src="~/Scripts/js/vendor/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+	<script>
+		(function (b, o, i, l, e, r) {
+			b.GoogleAnalyticsObject = l; b[l] || (b[l] =
+			function () { (b[l].q = b[l].q || []).push(arguments) }); b[l].l = +new Date;
+			e = o.createElement(i); r = o.getElementsByTagName(i)[0];
+			e.src = '//www.google-analytics.com/analytics.js';
+			r.parentNode.insertBefore(e, r)
+		}(window, document, 'script', 'ga'));
+		ga('create', 'UA-XXXXX-X'); ga('send', 'pageview');
+	</script>
+	<script src="~/Scripts/js/Module/friendApp.js"></script>
+	<script src="~/Scripts/js/Config/friendRouteConfig.js"></script>
+	<script src="~/Scripts/js/Services/userDataService.js"></script>
+	<script src="~/Scripts/js/Controller/HomeController.js"></script>
+	<script src="~/Scripts/js/Controller/UserController.js"></script>
+	@RenderSection("scripts", required: false)
+</body>
+</html>

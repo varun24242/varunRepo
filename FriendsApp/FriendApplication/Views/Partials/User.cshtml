@@ -1,0 +1,35 @@
+﻿<div ng-controller="UserController as userController">
+	<div class="index-table-margin">
+		<div>
+			<h2>{{userController.data.name}}'s Profile</h2>
+		</div>
+		<div>
+			<a href="#/"><span>< back </span></a>
+		</div>
+		<div class="row">
+			<div class="col-md-8">
+				<div class="row">
+					<div class="col-md-4">
+						<span class="glyphicon glyphicon-user user-icon-size"></span>
+					</div>
+					<div class="col-md-8">
+						<div class="user-border-bottom">
+							<span>Name: {{userController.data.name}}</span>
+							<span class="float-right glyphicon" ng-class="{'glyphicon-ok-sign':userController.data.available , 'glyphicon-remove-sign':!userController.data.available}"></span>
+							<span class="float-right">Availability: </span>
+
+						</div>
+						<div class="user-border-bottom">phone: {{userController.data.phone}}</div>
+						<div class="user-border-bottom">address: {{userController.data.address}}</div>
+						<div class="user-border-bottom">status: {{userController.data.status}}</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div>
+			<div class="user-border-bottom">Biodata : {{userController.data.bio}}</div>
+			<div class="user-border-bottom">Status : {{userController.data.status}}</div>
+		</div>
+	</div>
+</div>
